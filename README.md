@@ -1,2 +1,27 @@
-# XamarinNativeHandsOn
-Create simple iOS/Android App using UITableView/ListView
+# XamarinNativeShortHandsOn
+
+Hands on lab project and document for creating simple iOS/Android App with UITableView/ListView
+
+Please see the Japanese document [here](docs/01.HandsOn-Overview.md)
+
+In this hands on, I have used CircleImageView-Xamarin.Android by James Montemagno.
+The license is below: 
+
+========================================
+Copyright 2015 Refractored LLC/James Montemagno
+
+Original License
+Copyright 2014 - 2015 Henning Dodenhof
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+========================================
