@@ -1,4 +1,4 @@
-# XamarinNativeShortHandsOn
+# Xamarin Native Short Hands On Lab
 
 Hands on lab project and document for creating simple iOS/Android App with UITableView/ListView
 
