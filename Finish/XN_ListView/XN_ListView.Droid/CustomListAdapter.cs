@@ -51,7 +51,7 @@ namespace XN_ListView.Droid
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
 
-            //BaseAdapter<T>の対応するプロパティを割り当て
+            //BaseAdapter<T> 縺ｮ蟇ｾ蠢懊☆繧九�励Ο繝代ユ繧｣繧貞牡繧雁ｽ薙※
             view.FindViewById<TextView>(Resource.Id.mainText).Text = item.Main;
             view.FindViewById<TextView>(Resource.Id.subText).Text = item.Sub;
             view.FindViewById<ImageView>(Resource.Id.imageView).SetImageResource(item.ImageResourceId);
