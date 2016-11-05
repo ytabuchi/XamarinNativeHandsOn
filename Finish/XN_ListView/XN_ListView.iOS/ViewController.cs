@@ -5,15 +5,40 @@ namespace XN_ListView.iOS
 {
     public partial class ViewController : UIViewController
     {
-        int count = 1;
-
         public ViewController(IntPtr handle) : base(handle)
         {
         }
 
+        private static Random rnd = new Random();
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            CustomListView.Source = new CustomListViewSource();
+
+            AddButton.TouchUpInside += (sender, e) =>
+            {
+                var item = new TableItem
+                {
+                    Main = $"Item_{rnd.Next()}",
+                    Sub = $"Description_{rnd.Next()}",
+                    ImageResourceId = rnd.Next(0, 4)
+                };
+                // 新規アイテムを追加して再読み込みさせる
+                var src = CustomListView.Source as CustomListViewSource;
+                src.Items.Add(item);
+                CustomListView.ReloadData();
+            };
+
+            RemoveButton.TouchUpInside += (sender, e) =>
+            {
+                // 末尾のアイテムを削除して再読み込みさせる
+                var src = CustomListView.Source as CustomListViewSource;
+                if (src.Items.Count < 1)
+                    return;
+                src.Items.RemoveAt(src.Items.Count - 1);
+                CustomListView.ReloadData();
+            };
         }
 
         public override void DidReceiveMemoryWarning()
