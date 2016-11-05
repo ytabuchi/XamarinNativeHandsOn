@@ -11,36 +11,36 @@ using UIKit;
 
 namespace XN_ListView.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("CircleImageViewCell")]
+    partial class CircleImageViewCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton AddButton { get; set; }
+        UIKit.UIImageView CircleImage { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView CustomListView { get; set; }
+        UIKit.UILabel MainLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton RemoveButton { get; set; }
+        UIKit.UILabel SubLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (AddButton != null) {
-                AddButton.Dispose ();
-                AddButton = null;
+            if (CircleImage != null) {
+                CircleImage.Dispose ();
+                CircleImage = null;
             }
 
-            if (CustomListView != null) {
-                CustomListView.Dispose ();
-                CustomListView = null;
+            if (MainLabel != null) {
+                MainLabel.Dispose ();
+                MainLabel = null;
             }
 
-            if (RemoveButton != null) {
-                RemoveButton.Dispose ();
-                RemoveButton = null;
+            if (SubLabel != null) {
+                SubLabel.Dispose ();
+                SubLabel = null;
             }
         }
     }

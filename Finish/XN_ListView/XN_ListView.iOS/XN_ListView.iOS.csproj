@@ -19,10 +19,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -69,6 +70,7 @@
   <ItemGroup>
     <ProjectReference Include="..\XN_ListView\XN_ListView.csproj">
       <Name>XN_ListView</Name>
+      <Project>{D1D3E96C-CEF7-4AE5-9015-DD0C0BC98E1F}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +133,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="CircleImageViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -143,6 +146,21 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableItem.cs" />
+    <Compile Include="CustomListViewSource.cs" />
+    <Compile Include="CircleImageViewCell.cs" />
+    <Compile Include="CircleImageViewCell.designer.cs">
+      <DependentUpon>CircleImageViewCell.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\monkeys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkeys\monkey1.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey2.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey3.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

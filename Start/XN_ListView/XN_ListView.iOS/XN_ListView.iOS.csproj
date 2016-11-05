@@ -69,6 +69,7 @@
   <ItemGroup>
     <ProjectReference Include="..\XN_ListView\XN_ListView.csproj">
       <Name>XN_ListView</Name>
+      <Project>{D1D3E96C-CEF7-4AE5-9015-DD0C0BC98E1F}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +144,16 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\monkeys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkeys\monkey1.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey2.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey3.jpg" />
+    <BundleResource Include="Resources\monkeys\monkey4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
