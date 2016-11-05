@@ -11,10 +11,13 @@ namespace XN_ListView.iOS
 
         private static Random rnd = new Random();
 
+        private string[] images;
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             CustomListView.Source = new CustomListViewSource();
+            images = System.IO.Directory.GetFiles("monkeys", "*.jpg");
 
             AddButton.TouchUpInside += (sender, e) =>
             {
@@ -22,7 +25,7 @@ namespace XN_ListView.iOS
                 {
                     Main = $"Item_{rnd.Next()}",
                     Sub = $"Description_{rnd.Next()}",
-                    ImageResourceId = rnd.Next(0, 4)
+                    ImagePath = images[rnd.Next(0, 4)]
                 };
                 // 新規アイテムを追加して再読み込みさせる
                 var src = CustomListView.Source as CustomListViewSource;

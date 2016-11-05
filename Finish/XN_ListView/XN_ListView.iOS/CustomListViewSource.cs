@@ -10,12 +10,10 @@ namespace XN_ListView.iOS
     {
         public List<TableItem> Items { get; }
 
-        private readonly string[] images;
 
         public CustomListViewSource()
         {
             Items = new List<TableItem>();
-            images = System.IO.Directory.GetFiles("monkeys", "*.jpg");
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -28,7 +26,7 @@ namespace XN_ListView.iOS
             var item = Items[indexPath.Row];
             cell.TextLabel.Text = item.Main;
             cell.DetailTextLabel.Text = item.Sub;
-            cell.ImageView.Image = UIImage.FromFile(images[item.ImageResourceId]);
+            cell.ImageView.Image = UIImage.FromFile(item.ImagePath);
             // まるく表示
             cell.ImageView.Layer.CornerRadius = cell.ContentView.Bounds.Height / 2;
             cell.ImageView.Layer.BorderWidth = 2;

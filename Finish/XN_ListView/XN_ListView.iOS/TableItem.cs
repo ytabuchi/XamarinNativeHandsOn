@@ -7,6 +7,6 @@ namespace XN_ListView.iOS
 
         public string Sub { get; set; }
 
-        public int ImageResourceId { get; set; }
+        public string ImagePath { get; set; }
     }
 }
