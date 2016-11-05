@@ -133,6 +133,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="CircleImageViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -147,6 +148,10 @@
     </Compile>
     <Compile Include="TableItem.cs" />
     <Compile Include="CustomListViewSource.cs" />
+    <Compile Include="CircleImageViewCell.cs" />
+    <Compile Include="CircleImageViewCell.designer.cs">
+      <DependentUpon>CircleImageViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\monkeys\" />

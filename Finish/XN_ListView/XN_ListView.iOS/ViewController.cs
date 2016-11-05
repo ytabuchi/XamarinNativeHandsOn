@@ -16,6 +16,7 @@ namespace XN_ListView.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            CustomListView.RegisterNibForCellReuse(CircleImageViewCell.Nib, nameof(CircleImageViewCell));
             CustomListView.Source = new CustomListViewSource();
             images = System.IO.Directory.GetFiles("monkeys", "*.jpg");
 

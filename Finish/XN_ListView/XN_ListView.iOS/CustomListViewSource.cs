@@ -18,20 +18,9 @@ namespace XN_ListView.iOS
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            var cell = tableView.DequeueReusableCell(nameof(TableItem), indexPath);
-            if (cell == null)
-            {
-                cell = new UITableViewCell(UITableViewCellStyle.Subtitle, nameof(TableItem));
-            }
+            var cell = (CircleImageViewCell)tableView.DequeueReusableCell(nameof(CircleImageViewCell), indexPath);
             var item = Items[indexPath.Row];
-            cell.TextLabel.Text = item.Main;
-            cell.DetailTextLabel.Text = item.Sub;
-            cell.ImageView.Image = UIImage.FromFile(item.ImagePath);
-            // まるく表示
-            cell.ImageView.Layer.CornerRadius = cell.ContentView.Bounds.Height / 2;
-            cell.ImageView.Layer.BorderWidth = 2;
-            cell.ImageView.Layer.BorderColor = UIColor.FromRGB(0x34, 0x98, 0xdb).CGColor;
-            cell.ImageView.ClipsToBounds = true;
+            cell.Update(item);
             return cell;
         }
 
